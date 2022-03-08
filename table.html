@@ -1,0 +1,337 @@
+<!DOCTYPE html> <!-- indique au navigateur que la page est en html 5 -->
+<html lang="fr">
+<head> <!-- c'est ici qu'on stocke toutes les infos autre que l'affichage en front -->
+	<meta charset="UTF-8">
+	<!-- on indique que width sera la largeur de l'écran en pixel et non en résolution -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cours html et css | Les tableaux</title>
+	<meta name="description" content="Cours html & css  sur les tableaux pour la promotion 2022 du Campus du Lac | COBAS">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="manifest" href="favicon/site.webmanifest">
+	<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- fonts déjà importé dans le fichier css -->
+	<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet"> -->
+	<link rel="stylesheet" href="css/style.css?ver=1.0.8">
+
+</head>
+<body>
+	<header id="nav_header">
+		<nav>
+			<ul>
+				<li class="list_nav first_item">
+					<a href="index.html">home</a>
+				</li>
+				<li class="list_nav">
+					<a href="media_queries.html">Media Queries</a>
+				</li>
+				<li class="list_nav">
+					<a href="table.html">Les tableaux</a>
+				</li>
+				<li class="list_nav">
+					<a href="form.html">Les formulaires</a>
+				</li>
+				<li class="list_nav">
+					<a href="bootstrap.html">Bootstrap</a>
+				</li>
+				
+				<li class="list_nav">
+					<a href="exercice.html">Exercices</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<h1>Les tableaux</h1>
+
+		<p>Les tableaux sont composés de balises :</p>
+		<ul>
+			<li>table => pour le container du tableau</li>
+			<li>thead => pour la ou les premières rangées</li>
+			<li>tbody => pour le corps du tableau</li>
+			<li>tfoot = pour la ou les dernières lignes</li>
+			<li>tr => pour chaque rangées</li>
+			<li>td => pour chaque cellule ou groupe de cellule</li>
+		</ul>
+		<table>
+			<tfoot>
+				<tr>
+					<th colspan="4">th Total</th>
+					<td>footer</td>
+					<!-- <td>footer</td>
+					<td>footer</td>
+					<td>footer</td> -->
+				</tr>
+			</tfoot>
+			<thead>
+				<tr>
+					<th>th header</th>
+					<td>header</td>
+					<td>header</td>
+					<td>header</td>
+					<td>header</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>th body</th>
+					<td>body</td>
+					<td>body</td>
+					<td>body</td>
+					<td>body</td>
+				</tr>
+				<tr>
+					<th>th body</th>
+					<td>body</td>
+					<td rowspan="2">body</td>
+					<td>body</td>
+					<td>body</td>
+				</tr>
+				<tr>
+					<th>th body</th>
+					<td>body</td>
+					<td>body</td>
+					<td>body</td>
+				</tr>
+
+			</tbody>
+		</table>
+		<h2>Exercices</h2>
+		<p>Reproduire l'image ci-dessous</p>
+		<img src="img/table_exo1.jpg">
+		<h3>Résultat :</h3>
+		<table>
+			<tr>
+				<td>coucou</td>
+				<td>coucou</td>
+				<td>coucou</td>
+				<td rowspan="4">coucou</td>
+			</tr>
+			<tr>
+				<td>coucou</td>
+				<td>coucou</td>
+				<td>coucou</td>
+			</tr>
+			<tr>
+				<td>coucou</td>
+				<td>coucou</td>
+				<td>coucou</td>
+			</tr>
+			<tr>
+				<td>coucou</td>
+				<td>coucou</td>
+				<td>coucou</td>
+			</tr>
+
+		</table>
+		<p>Reproduire l'image ci-dessous</p>
+		<img src="img/table_exo2.jpg">
+		<h3>Résultat :</h3>
+		<table class="table2">
+			<thead>
+				<tr>
+					<td>entête 1 test g</td>
+					<td>entête 2</td>
+					<td>entête 3</td>
+					<td>entête 4</td>
+				</tr>
+			</thead>
+
+			<tfoot>
+				<tr>
+					<td>bas de tableau 1</td>
+					<td>bas de tableau 2</td>
+					<td>bas de tableau 3</td>
+					<td>bas de tableau 4</td>
+				</tr>
+			</tfoot>
+
+			<tbody>
+				<tr>
+					<td rowspan="3">contenu</td>
+					<td colspan="2">contenu</td>
+					<td>contenu</td>
+					<!-- <td>contenu</td> -->
+				</tr>
+				<tr>
+					<!-- <td>contenu</td> -->
+					<td>contenu</td>
+					<td>contenu</td>
+					<td>contenu</td>
+				</tr>
+				<tr>
+					<td>contenu</td><!--  pour le rowspan  de la ligne précédente  -->
+					<td colspan="2">contenu</td>		
+					<!-- <td>contenu</td>
+					<td>contenu</td>  ici j'enleve 2 champs pour le colspan="3" du td précédent-->
+				</tr>
+			</tbody>
+		</table>
+		<p>Reproduire l'image ci-dessous</p>
+		<img src="img/table_exo3.png">
+		<h3>Résultat :</h3>
+		<table class="table3">
+			<thead>
+				<tr>
+					<td rowspan="2">Équipes</td>
+					<td colspan="6">Janvier</td>
+					<td rowspan="2"></td>
+				</tr>
+				<tr>
+					<td>Lundi</td>
+					<td>Mardi</td>
+					<td colspan="2">Mercredi</td>
+					<td>Jeudi</td>
+					<td>Vendredi</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Équipe 1</td>
+					<td colspan="4">Tâche 1</td>
+					<td colspan="2">Tâche 2</td>
+					<td rowspan="2">Semaine 1</td>
+				</tr>
+				<tr>
+					<td>Équipe 2</td>
+					<td colspan="3">Tâche 1</td>
+					<td colspan="3">Tâche 2</td>
+				</tr>
+				<tr>
+					<td>Équipe 1</td>
+					<td>Tâche 3</td>
+					<td colspan="4">Tâche 4</td>
+					<td>Tâche 5</td>
+					<td rowspan="2">Semaine 2</td>
+				</tr>
+				<tr>
+					<td>Équipe 2</td>
+					<td colspan="2">Tâche 3</td>
+					<td colspan="4">Tâche 4</td>
+				</tr>
+				<tr>
+					<td>Équipe 1</td>
+					<td colspan="3">Tâche 5</td>
+					<td colspan="3">Tâche 6</td>
+					<td rowspan="2">Semaine 3</td>
+				</tr>
+				<tr>
+					<td>Équipe 2</td>
+					<td>Tâche 5</td>
+					<td colspan="5">Tâche 6</td>
+				</tr>
+				<tr>
+					<td>Équipe 1</td>
+					<td colspan="4">Tâche 7</td>
+					<td colspan="2">Tâche 8</td>
+					<td rowspan="2">Semaine 4</td>
+				</tr>
+				<tr>
+					<td>Équipe 2</td>
+					<td colspan="3">Tâche 7</td>
+					<td colspan="3">Tâche 8</td>
+				</tr>
+			</tbody>
+		</table>
+		<h2>Exemple de tableau dans un autre tableau</h2>
+		<table class="table4">
+			<tr>
+				<td>column 1</td>
+				<td>column 2</td>
+				<!-- <td>column 2</td>
+				<td>column 3</td>
+				<td>column 4</td>
+				<td>column 5</td> -->
+			</tr>
+			<tr>
+				<td>tableau</td>
+				<td>le fameux tableau
+					<table class="table5">
+						<tr>
+							<td>sous-tableau 1</td>
+							<td>sous-tableau 2</td>
+							<td>sous-tableau 3</td>
+							<td>sous-tableau 4</td>
+							<td>sous-tableau 5</td>
+						</tr>
+						<tr>
+							<td>sous-tableau 1</td>
+							<td>sous-tableau 2</td>
+							<td>sous-tableau 3</td>
+							<td>sous-tableau 4</td>
+							<td>sous-tableau 5</td>
+						</tr>
+						<tr>
+							<td>sous-tableau 1</td>
+							<td>sous-tableau 2</td>
+							<td>sous-tableau 3</td>
+							<td>sous-tableau 4</td>
+							<td>sous-tableau 5</td>
+						</tr>
+						<tr>
+							<td>sous-tableau 1</td>
+							<td>sous-tableau 2</td>
+							<td>sous-tableau 3</td>
+							<td>sous-tableau 4</td>
+							<td>sous-tableau 5</td>
+						</tr>
+						<tr>
+							<td>sous-tableau 1</td>
+							<td>sous-tableau 2</td>
+							<td>sous-tableau 3</td>
+							<td>sous-tableau 4</td>
+							<td>sous-tableau 5</td>
+						</tr>
+
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>bottom 1</td>
+				<td>bottom 2</td>
+			</tr>
+		</table>
+	</main>
+	<footer>
+		<div>
+			<a href="index.html">
+				<img class="img_footer" src="img/daft_troupper.jpg" alt="Daft Troupper">
+			</a>
+		</div>
+		<div>
+			<ul>
+				<li>
+					<a href="https://la-cascade.io/une-liste-de-raccourcis-emmet/" target="_blank">Tuto Emmet</a>
+				</li>
+				<li>
+					<a href="https://gist.github.com/spyl94/3963465" target="_blank">Raccourci clavier sublime</a>
+				</li>
+				<!-- pour VS Code -->
+				<li>
+					<a href="https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf" target="_blank">Raccourci clavier VS Code</a>
+				</li>
+			</ul>
+		</div>
+		<div>
+			<ul>
+				<li>
+					<!-- pour ouvrir directement la boite de dialogue avec l'interface email configuré dans OS de l'utilisateur -->
+					<a href="mailto:test@test.fr">Envoyer un email</a>
+				</li>
+				<li>
+					<!-- pour ouvrir directement la boite de dialogue avec l'interface téléphone configuré dans OS de l'utilisateur -->
+					<a href="tel:+33654856445">Appeler</a>
+				</li>
+			</ul>
+		</div>
+
+		<div>Copyright &copy; 2022</div>
+	</footer>
+</body>
+</html>

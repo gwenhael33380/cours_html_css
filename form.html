@@ -1,0 +1,191 @@
+<!DOCTYPE html> <!-- indique au navigateur que la page est en html 5 -->
+<html lang="fr">
+<head> <!-- c'est ici qu'on stocke toutes les infos autre que l'affichage en front -->
+	<meta charset="UTF-8">
+	<!-- on indique que width sera la largeur de l'écran en pixel et non en résolution -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cours html et css | Les formulaires</title>
+	<meta name="description" content="Cours html & css  sur les formulaires pour la promotion 2022 du Campus du Lac | COBAS">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="manifest" href="favicon/site.webmanifest">
+	<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- fonts déjà importé dans le fichier css -->
+	<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet"> -->
+	<link rel="stylesheet" href="css/style.css?ver=1.0.8">
+
+</head>
+<body>
+	<header id="nav_header">
+		<nav>
+			<ul>
+				<li class="list_nav first_item">
+					<a href="index.html">home</a>
+				</li>
+				<li class="list_nav">
+					<a href="media_queries.html">Media Queries</a>
+				</li>
+				<li class="list_nav">
+					<a href="table.html">Les tableaux</a>
+				</li>
+				<li class="list_nav">
+					<a href="form.html">Les formulaires</a>
+				</li>
+				<li class="list_nav">
+					<a href="bootstrap.html">Bootstrap</a>
+				</li>
+				
+				<li class="list_nav">
+					<a href="exercice.html">Exercices</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<h1>Les formulaires</h1>
+		<p>L'attribut action va indiquer où va être soumis le formulaire</p>
+		<p>La method est le type d'envoi</p>
+		<p>enctype va servir pour l'envoi de fichier</p>
+		<p>On soumet le formulaire et pas le bouton submit</p>
+		<br>
+		<h2>Le formulaire</h2>
+		<form action="submit_form.php" method="post" enctype="multipart/form-data">
+			<!-- input text -->
+			<label for="name">Nom Prénom</label>
+			<input type="text" id="name" placeholder="tapez votre Nom prénom">
+
+			<!-- input email -->
+			<label for="email">email</label>
+			<input type="email" id="email" name="email" required>
+
+			<!-- input number -->
+			<label for="year">Votre age</label>
+			<input type="number" id="year" min="18" max="99" step="1" placeholder="chiffre entre 1 et 99">
+
+			<!-- input date -->
+			<label for="date_value">Choisir une date</label>
+			<input type="date" id="date_value" min="2022-01-28" max="2023-01-28" value="2022-01-28">
+
+			<!-- input datetime-local -->
+			<label for="datetime_value">Choisir une date et une heure</label>
+			<input type="datetime-local" id="datetime_value" min="2022-01-28T08:00:00" max="2023-01-28T23:59:59" value="2022-01-28T08:00:00" name="test">
+
+			<!-- input password -->
+			<label for="password">Votre mot de passe</label>
+			<input type="password" id="password" name="password" placeholder="tapez votre mot de passe">
+
+			<!-- input password -->
+			<label for="color">Choisir une couleur</label>
+			<input type="color" id="color" value="#4f2c1a">
+
+			<!-- input file -->
+			<p><a href="https://developer.mozilla.org/fr/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types">Doc type MIME pour le accept</a></p>
+			<label for="file">Choisir un fichier</label>
+			<input type="file" id="file" accept="image/png, image/jpg, image/jpeg" multiple>
+			<!-- pour le accept on pourra mettre image/* -->
+			<input type="hidden" name="MAX_FILE_SIZE" value="1048576"> <!-- 1Mo == 1024*1024 -->
+
+			<!-- les checkbox	 -->
+			<div class="d-inline">
+				<h3>choisir une ou plusieurs spécialités</h3>
+				<input id="dev" type="checkbox">
+				<label for="dev">Dev</label>
+				<input id="design" type="checkbox">
+				<label for="design">Design</label>
+				<input id="seo" type="checkbox">
+				<label for="seo">SEO</label>
+			</div>
+
+			<!-- les boutons radios	 -->
+			<div class="d-inline">
+				<h3>choisir une seule spécialité</h3>
+				<p>Pour appartenir au même groupe radio, il faut que les "name" soient identiques. ici on a donc 2 groupes de boutons radios</p>
+				<input id="dev2" type="radio" name="choice_radio" value="dev2" checked>
+				<label for="dev2">Dev</label>
+				<input id="design2" type="radio" name="choice_radio" value="design2">
+				<label for="design2">Design</label>
+				<input id="seo2" type="radio" name="choice_radio" value="seo2">
+				<label for="seo2">SEO</label>
+				<input id="divers" type="radio" name="choice_radio2" value="divers" checked>
+				<label for="divers">divers</label>
+			</div>
+
+			<!-- input range -->
+			<label for="range">Choisir une valeur</label>
+			<input type="range" id="range" min="1" max="100" step="5" value="1">
+
+			<!-- le select -->
+			<label for="select">Sélectionner une option</label>
+			<select name="select" id="select">
+				<option value="">choisissez une option</option>
+				<option value="dev">développement</option>
+				<option value="design">design</option>
+				<option value="seo">réferencement</option>
+			</select>
+			<label>Veuillez choisir un ou plusieurs animaux :
+			<select name="pets" multiple size="4">
+			    <optgroup label="Animaux à 4-jambes">
+					<option value="Chien">Chien</option>
+					<option value="chat">Chat</option>
+					<option value="hamster" disabled>Hamster</option>
+			    </optgroup>
+			    <optgroup label="Animaux volants">
+					<option value="perroquet">Perroquet</option>
+					<option value="macaw">Macaw</option>
+					<option value="albatros">Albatros</option>
+			    </optgroup>
+			  </select>
+			</label>
+
+			<!-- le textarea -->
+			<label for="textarea">Votre message</label>
+			<textarea name="textarea" id="textarea" cols="30" rows="5" placeholder="tapez votre texte..."></textarea>
+			<button type="submit">Envoyer</button>
+			<!-- <input type="submit" value="Envoyer"> -->
+		</form>
+
+	</main>
+	<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11361.32177798648!2d-1.1065283000000001!3d44.6107183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1643364439953!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+	<footer>
+		<div>
+			<a href="index.html">
+				<img class="img_footer" src="img/daft_troupper.jpg" alt="Daft Troupper">
+			</a>
+		</div>
+		<div>
+			<ul>
+				<li>
+					<a href="https://la-cascade.io/une-liste-de-raccourcis-emmet/" target="_blank">Tuto Emmet</a>
+				</li>
+				<li>
+					<a href="https://gist.github.com/spyl94/3963465" target="_blank">Raccourci clavier sublime</a>
+				</li>
+				<!-- pour VS Code -->
+				<li>
+					<a href="https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf" target="_blank">Raccourci clavier VS Code</a>
+				</li>
+			</ul>
+		</div>
+		<div>
+			<ul>
+				<li>
+					<!-- pour ouvrir directement la boite de dialogue avec l'interface email configuré dans OS de l'utilisateur -->
+					<a href="mailto:test@test.fr">Envoyer un email</a>
+				</li>
+				<li>
+					<!-- pour ouvrir directement la boite de dialogue avec l'interface téléphone configuré dans OS de l'utilisateur -->
+					<a href="tel:+33654856445">Appeler</a>
+				</li>
+			</ul>
+		</div>
+
+		<div>Copyright &copy; 2022</div>
+	</footer>
+</body>
+</html>

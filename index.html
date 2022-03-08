@@ -1,0 +1,254 @@
+<!DOCTYPE html> <!-- indique au navigateur que la page est en html 5 -->
+<html lang="fr">
+<head> <!-- c'est ici qu'on stocke toutes les infos autre que l'affichage en front -->
+	<meta charset="UTF-8">
+	<!-- on indique que width sera la largeur de l'écran en pixel et non en résolution -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cours html et css</title>
+	<meta name="description" content="Cours html & css pour la promotion 2022 du Campus du Lac | COBAS">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="manifest" href="favicon/site.webmanifest">
+	<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- fonts déjà importé dans le fichier css -->
+	<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet"> -->
+	<link rel="stylesheet" href="css/style.css?ver=1.0.8">
+
+</head>
+<body>
+	<header id="nav_header">
+		<nav>
+			<ul>
+				<li class="list_nav first_item">
+					<a href="index.html">home</a>
+				</li>
+				<li class="list_nav">
+					<a href="media_queries.html">Media Queries</a>
+				</li>
+				<li class="list_nav">
+					<a href="table.html">Les tableaux</a>
+				</li>
+				<li class="list_nav">
+					<a href="form.html">Les formulaires</a>
+				</li>
+				<li class="list_nav">
+					<a href="bootstrap.html">Bootstrap</a>
+				</li>
+				
+				<li class="list_nav">
+					<a href="exercice.html">Exercices</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<!-- h1 ==> titre de la page, il ne doit y avoir que 1 H1 par page -->
+		<h1>Cours HTML, CSS</h1>
+		<section>
+			<article>
+				<h2 class="title_h2">Les titres Hn <span>OK</span></h2>
+				<p>Les titres sont représentés par un h suivi d'un numéro</p>
+				<p>Il existe les H1, H2, H3, H4, H5, H6</p>
+				<p>Il n'existe qu'un H1 par page, c'est le titre de la page</p>
+				<p>Les autres éléments peuvent être affchés autant de fois que l'on désire</p>
+				<p>Mais...</p>
+				<p>H3 sera un sous-titre de H2, H4 un sous-titre de H3, H5 un sous-titre de H4 etc...</p>
+			</article>
+			<article>
+				<!--
+				inserer une image avec la balise image va rendre le contenu de de l'image (largeur et hauteur). si cette image est important et en relation avec le contenu texte, il faudra remplir l'attribut 'alt'
+				c'est l'attribut alt qui va servir pour le SEO et donc pour l'indexation de l'image dans google image
+				-->
+				<h2>Insérer une image</h2>
+				<img class="img_scale" src="img/star_wars.jpg" alt="Image Star Wars">
+				<p>Pour afficher une image, on renseigne le chemin de l'image dans SRC en partant du fichier courant (celui sur lequel on se trouve : index.html)</p>
+
+				<h2>Utilisation du background-image</h2>
+				<div class="bg_img"></div>
+			</article>
+			<article>
+				<h2>Margin et padding</h2>
+				<h3>Margin</h3>
+				<p>Le margin indique les marges extérieurs d'un block</p>
+				<p>Les marges ne sont pas cumulables, la plus grande marge sera retenu</p>
+				<p class="margin-bottom-250">exemple : (margin-bottom 250)</p>
+				<div class="margin-bottom-100">(margin-bottom 100)Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo doloribus molestias sed numquam animi quibusdam, delectus tempore praesentium dolore eos saepe, sint possimus minus ratione quae voluptatum hic, ipsum ut!
+				A dolorem exercitationem aperiam tenetur itaque, dicta mollitia alias suscipit, explicabo sit, qui totam voluptate nostrum ex dolor voluptatum soluta sequi ipsam quis dignissimos. Commodi architecto iste, nobis nesciunt omnis.</div>
+				<div class="margin-top-150">(margin-top 150)Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo doloribus molestias sed numquam animi quibusdam, delectus tempore praesentium dolore eos saepe, sint possimus minus ratione quae voluptatum hic, ipsum ut!
+				A dolorem exercitationem aperiam tenetur itaque, dicta mollitia alias suscipit, explicabo sit, qui totam voluptate nostrum ex dolor voluptatum soluta sequi ipsam quis dignissimos. Commodi architecto iste, nobis nesciunt omnis.</div>
+				<h3>Padding</h3>
+				<p>Le padding indique les marges intérieures d'un block</p>
+
+			</article>
+			<article>
+				<h2>Les balises inlines</h2>
+				<a href="https://developer.mozilla.org/fr/docs/Web/HTML/Inline_elements">Lien vers les balises inline</a>
+				<a href="https://www.w3schools.com/html/html_blocks.asp">Autre lien vers les balises inline</a>
+			</article>
+			<article>
+				<h2>Les positions</h2>
+				<h3>la position relative</h3>
+				<p>Cette position va rester toujours dans le flux de la page mais on va pouvoir jouer sur l'axe z</p>
+				<p>la position relative va aussi servir de référence pour les éléments en position absolute</p>
+				<h3>la position absolute</h3>
+				<p>Cette position va sortir l'élément concerné du flux de la page html</p>
+				<p>on va pouvoir ensuite lui donner sa position avec top, right, bottom et left</p>
+				<div class="pos_relative">
+					<div class="pos_absolute form_2"></div>
+					<div class="pos_absolute form_1"></div>
+				</div>
+				<h3>la position fixed</h3>
+				<p>cette position va permettre de fixer un élément par rapport à la window et celui-ci restera fixe malgré le scroll</p>
+				<p>de la même façon que la position absolute, l'élément sort du flux et on peut agir sur son z-index</p>
+				<p>Voir le header pour la position fixed</p>
+			</article>
+			<article>
+				<h2>Le hover</h2>
+				<p>Le hover va permettre d'interagir sur un élément ou un de ses enfants au passage de la souris</p>
+
+			</article>
+			<article>
+				<h2>Le float</h2>
+				<img class="float_left" src="img/daft_troupper.jpg" alt="encore toi !!!">
+				<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus autem rerum error id neque, suscipit non accusamus nam commodi explicabo veritatis delectus perspiciatis impedit blanditiis quas facilis tempora? Ab, eum.
+				Assumenda rem earum voluptatibus mollitia laudantium amet nemo debitis quae nihil repellat. Dolorem repudiandae, repellendus est laboriosam non? Natus dolores suscipit iste dolore cumque consequatur, unde vero? Quam, soluta nobis!
+				Ab quae fugit perferendis, corrupti repellendus, accusamus iste laboriosam voluptate sed minima, harum ut iusto? Nemo voluptas ullam reiciendis, optio sequi sit consectetur, similique nostrum laborum possimus, facere tempora vero.
+				Adipisci omnis asperiores, laudantium blanditiis error sapiente autem odit, mollitia quia necessitatibus quae earum perferendis commodi est voluptatem quidem beatae eligendi suscipit, molestiae illo similique esse fugiat illum, explicabo. Alias!
+				Accusamus, eveniet molestiae, cumque, reiciendis modi ratione et optio nesciunt provident deleniti iusto tenetur! Quae illo beatae natus, magnam provident voluptatem iusto perferendis perspiciatis saepe corporis, pariatur. Veritatis eius, perferendis.
+				Officia libero iste facere dicta molestiae dolorem quos totam doloribus pariatur ratione nihil, incidunt, itaque eius architecto repellendus quibusdam praesentium corrupti numquam fugiat repellat necessitatibus aut eveniet accusantium illo. Deleniti.
+				</p>
+				<div class="stop_float">Ici je ne suis pas en position float</div>
+
+			</article>
+			<article>
+				<h2>La flexbox</h2>
+				<p>la flexbox permet d'aligner correctement des éléments entre eux aussi sur l'axe vertical que horizontal</p>
+				<h3>de façon horizontale</h3>
+				<div class="flex container_flex">
+					
+					<div class="flex_red column1">
+						<h3>Colonne 1</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime dignissimos laudantium aperiam dolor explicabo ex dolorum quibusdam nihil similique sed hic, debitis esse? Exercitationem, assumenda, dolore iure veritatis doloribus animi.
+						Itaque, voluptates, pariatur. Enim est, sunt odio minima error ipsa rem qui! Ducimus praesentium consequatur quae ipsa molestias quisquam officia qui totam quis nihil molestiae, soluta voluptates exercitationem possimus temporibus?
+						Veniam libero ducimus ullam quisquam consequatur magnam, quas molestias in sapiente eos earum velit fugit, molestiae reprehenderit delectus ab non, hic animi, tempora. Ab voluptates quidem hic deleniti, eum aliquid!</p>
+						<a href="#">En savoir plus <i class="fas fa-arrow-right"></i></a>
+					</div>
+					<div class="flex_red column2">
+						<h3>Colonne 2</h3>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, vitae et, repellat at officia error nam libero, nisi expedita rerum sit aliquam asperiores provident. Deleniti, obcaecati esse atque minus nam.
+						Commodi impedit, magnam totam numquam vero, saepe, deleniti ullam eveniet necessitatibus repellendus atque aliquam? Illum reiciendis reprehenderit asperiores saepe quas libero, voluptates expedita quaerat totam iusto. Repellat culpa, eos voluptatum!</p>
+						<a href="#">En savoir plus <i class="fas fa-arrow-right"></i></a>
+					</div>
+					<div class="flex_red column3">
+						<h3>Colonne 3</h3>
+						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas placeat tempora beatae dicta ex non voluptates fugiat aperiam nihil accusamus, libero corporis pariatur nemo eligendi eos quo, corrupti consequuntur recusandae.
+						Quia quisquam dolor rerum delectus illum iusto dolorem commodi perspiciatis provident assumenda error tenetur odio adipisci, sint alias, officia sapiente nihil. Maxime fuga aspernatur dolorem cum reprehenderit. Cupiditate odit, quisquam.</p>
+						<a href="#">En savoir plus <i class="fas fa-arrow-right"></i></a>
+					</div>
+				</div>
+			</article>
+			<article>
+				<h2>Le GRID</h2>
+				<p>Le grid est un type de positionnement ou chaque élément va avoir un point de départ et d'arrivée que ce soit dans les rangées ou les colonnes</p>
+				<a href="https://developer.mozilla.org/fr/docs/Web/CSS/CSS_Grid_Layout">Doc GRID</a>
+				<a href="https://cssgridgarden.com/#fr">Pour s'exercer</a>
+				<br>
+				<p>De la même façon que le display flex, quand grid est paramétré sur un container, ce sont tous ses enfants directs qui sont impactés</p>
+				<p>Il va falloir définir le nombre de rangée et de colonne</p>
+				<p>grid-template-rows qui va définir les rangées</p>
+				<p>grid-template-columns qui va définir les colonnes</p>
+				<p>Celles-ci peuvent être définis en px, en %, en em et rem, et fr(fraction)</p>
+				<br>
+				<p>Maintenant, on va définir ce que va faire chaque enfant (élément), en leur donnant un point de départ et d'arrivée sur les rangées mais aussi sur les colonnes</p>
+				<p>grid-row va définir où commence l'élément et où il finit dans la rangée</p>
+				<p>grid-column va définir où commence l'élément et où il finit dans la colonne</p>
+
+
+				<h3>Exemple</h3>
+				<div class="grid">
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+				</div>
+				<h2>Autre maniére avec les areas</h2>
+				<p>Avec les areas, on va disposer les éléments directement dans le container, seule contrainte, il va falloir nommer tous les éléments avec grid-area</p>
+				<h3>Exemple</h3>
+				<div class="grid2">
+					<div class="item2"></div> <!-- a -->
+					<div class="item2"></div> <!-- b -->
+					<div class="item2"></div> <!-- c -->
+					<div class="item2"></div> <!-- d -->
+					<div class="item2"></div> <!-- e -->
+				</div>
+			</article>
+
+			<article>
+				<h2>Les Keyframes</h2>
+				<p>Les keyframes servent à faire des animations en css</p>
+				<a href="https://developer.mozilla.org/fr/docs/Web/CSS/animation">Lien doc keyframes</a>
+				<p>exemple :</p>
+				<pre>
+					<code>
+						@keyframes move_right {
+							from {
+								left: 0;
+							}
+							to {
+								left: calc(100% - 50px);
+							}
+						}
+					</code>
+					<div class="content_keyframe">
+						<div class="object_keyframe"></div>
+					</div>
+				</pre>
+
+			</article>
+		</section>
+
+	</main>
+	<footer>
+		<div>
+			<a href="index.html">
+				<img class="img_footer" src="img/daft_troupper.jpg" alt="Daft Troupper">
+			</a>
+		</div>
+		<div>
+			<ul>
+				<li>
+					<a href="https://la-cascade.io/une-liste-de-raccourcis-emmet/" target="_blank">Tuto Emmet</a>
+				</li>
+				<li>
+					<a href="https://gist.github.com/spyl94/3963465" target="_blank">Raccourci clavier sublime</a>
+				</li>
+				<!-- pour VS Code -->
+				<li>
+					<a href="https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf" target="_blank">Raccourci clavier VS Code</a>
+				</li>
+			</ul>
+		</div>
+		<div>
+			<ul>
+				<li>
+					<!-- pour ouvrir directement la boite de dialogue avec l'interface email configuré dans OS de l'utilisateur -->
+					<a href="mailto:test@test.fr">Envoyer un email</a>
+				</li>
+				<li>
+					<!-- pour ouvrir directement la boite de dialogue avec l'interface téléphone configuré dans OS de l'utilisateur -->
+					<a href="tel:+33654856445">Appeler</a>
+				</li>
+			</ul>
+		</div>
+
+		<div>Copyright &copy; 2022</div>
+	</footer>
+</body>
+</html>

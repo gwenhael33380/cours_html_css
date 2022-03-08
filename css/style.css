@@ -1,0 +1,673 @@
+/* import d'une police à partir d'une source externe (CDN) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+/* # appelle un id */
+/* . appelle une classe */
+/* li appelle la balise li */
+
+/*.class {
+	propriété: valeur;
+}*/
+
+/* chargement d'une police stocké dans un dossier du projet */
+/* police à privilégier en TTF */
+
+/* https://developer.mozilla.org/fr/docs/Web/CSS/@font-face */
+
+@font-face {
+	font-family: "Open Sans";
+	src: 	url("../fonts/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf"),
+			url("../fonts/Open_Sans/OpenSans-Italic-VariableFont_wdth,wght.ttf");
+}
+body {
+	font-size: 16px;
+	font-family: 'Montserrat', sans-serif;/* family comprise le navigateur */
+}
+img {
+	max-width: 100%;
+}
+nav {
+	font-size: 10px;
+}
+main {
+	padding: 100px 0;
+}
+* {
+	box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-family: "Open Sans";
+}
+footer {
+	display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #000;
+    line-height: 2;
+}
+footer a {
+	color: #fff;
+	transition: all 0.4s;
+	text-decoration: none;
+}
+footer a:hover {
+	color: #cccccc;
+}
+input:not([type="color"]) {
+	width: 400px;
+}
+input::placeholder {
+	color: red;
+	font-size: 25px;
+}
+label, input, textarea, select {
+	display:  block;
+}
+.d-inline>* {
+	display: inline-block;
+}
+/*
+Taille de police
+px taille réel en pixel
+em taille en pourcentage de son container
+rem taille en pourcentage du body
+*/
+
+#nav_header {
+	position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+	font-weight: 400; /* 100 à 900 de extra-light à extra-bold */
+	text-align: center; /* left, center ou right */
+	font-style: italic;
+	text-transform: uppercase;
+	background-color: blue;
+	padding: 20px 0;
+	z-index: 50;
+	/*
+	padding: 20px; ==> 20px de tous les côtés
+	padding: 20px 0; ==> 20px en haut et en bas et 0 sur les côtés
+	padding: 20px 10px 30px; ==> 20px en haut 10px des 2 côtés et 30px en bas
+	padding: 10px 20px 25px 15px; => on part du haut et on applique
+		les valeurs dans le sens des aiguilles d'un montre
+	*/
+}
+.list_nav {
+	font-size: 2em;
+	letter-spacing: 0.05em;
+}
+#nav_header a {
+	color: white;
+	text-decoration: none;
+}
+.list_nav.first_item a {
+	color: red !important;
+}
+#nav_header ul li{
+	display: inline-block;
+	margin: 0 20px;
+}
+#nav_header ul li:hover a {
+	color:  #fff;
+}
+/*exemple margin*/
+.margin-bottom-100{
+	margin-bottom: 100px;
+}
+.margin-bottom-250{
+	margin-bottom: 250px;
+}
+.margin-top-150{
+	margin-top: 150px;
+}
+.title_h2 span {
+	text-align: right;
+}
+.img_scale:hover {
+	filter: grayscale(100%);
+	transition: all 2s; /*propriété de la transition (ou all) et le temps de la transition*/
+}
+/* pour le background-image, le container doit toujours avoir une taille ou du contenu pour lui donner une haute */
+.bg_img {
+    background-image: url(../img/yoda.jpg);
+    height: 500px;
+    /* padding-bottom: 50%;  => pour que l'image soit responsive */
+    /* min-height: 500px; => cette propriété va donner une hauteur minimum à la div et s'adapter au contenu si cela depasse */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 80px 5%;
+}
+/*position absolute | relative*/
+.pos_relative {
+	height: 150px;
+	/* https://developer.mozilla.org/fr/docs/Web/CSS/border */
+    border: 15px solid red;
+    position: relative;
+}
+.pos_absolute {
+    position: absolute;
+    /* https://developer.mozilla.org/fr/docs/Web/CSS/border-radius */
+    border-radius: 50px;
+    /* border-radius: 10px 50px 10px 50px; ==> exemple ballon de rugby */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.form_1 {
+	width: 50px;
+    height: 50px;
+	background: red;
+}
+.form_2 {
+	width: 25px;
+    height: 25px;
+	background: blue;
+	z-index: 1;
+}
+
+.img_footer {
+	width: 200px;
+    height: 110px;
+    object-fit: cover;
+    object-position: top;
+}
+.float_left {
+	float: left;
+	width: 100px;
+	margin: 0 28px 14px 0;
+}
+.stop_float {
+	clear: both;
+}
+.flex {
+	display: flex;
+	/*pour que les blocks reviennent à la ligne s'il n'ont pas assez d'espace*/
+	flex-wrap: wrap;
+	/*pour les aligner sur l'axe horizontal*/
+	justify-content: space-evenly; /*flex-start, flex-end, space-between, space-around, space-evenly*/
+	/*pour les aligner sur l'axe vertical*/
+	align-content: center; /*flex-start, flex-end, center, stretch*/
+}	
+.container_flex {
+	/*height: 800px;*/
+	border: 5px solid red;
+}
+.flex_red {
+	margin: 5px;
+	background-color: red;
+	width: 25%;
+/*	height: 200px;
+*/	display: flex;
+	justify-content: flex-start;
+	align-items: center; /*flex-start, flex-end, center, stretch*/
+	flex-direction: column;
+	padding: 30px;
+	margin: 5px;
+}
+.flex_red a {
+	align-self: flex-end;
+}
+.column2 {
+	order: 1;
+}
+.column1{
+	order: 3;
+}
+.column3{
+	order: 2;
+}
+
+/*grid*/
+.grid {
+	display: grid;
+	grid-template-rows: 80px 1fr 20%;
+	grid-template-columns: 1fr 1fr 1fr;
+	/*on peut l'écrire aussi
+	grid-template-columns: repeat(3, 1fr);*/
+	/*raccourci
+	grid-template: rows / columns;
+	grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;*/
+	height: 20vw;
+    width: 30%;
+	grid-gap: 10px; /*ajoute des marges entre chaque élément*/
+}
+.grid2 {
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
+	/*raccourci
+	grid-template: rows / columns;
+	grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;*/
+
+	/*je place mes éléments avec grid-template-areas*/
+	grid-template-areas: "a a b" "c d b" "e d b";
+	height: 20vw;
+    width: 30%;
+	grid-gap: 10px; /*ajoute des marges entre chaque élément*/
+}
+.item,
+.item2 {
+	border: 1px solid #000;
+	background-color: orange;
+}
+.item:nth-child(1) {
+	/*grid-row: rangée de départ/rangée d'arrivée;*/
+	grid-row: 1;
+	grid-column: 1/3;
+}
+.item:nth-child(2) {
+	grid-row: 1/4;
+	grid-column: 3;
+}
+.item:nth-child(3) {
+	grid-row: 2/4;
+	grid-column: 2;
+}
+.item2:nth-child(1) {
+	grid-area: a;
+}
+.item2:nth-child(2) {
+	grid-area: b;
+}
+.item2:nth-child(3) {
+	grid-area: c;
+}
+.item2:nth-child(4) {
+	grid-area: d;
+}
+.item2:nth-child(5) {
+	grid-area: e;
+}
+/************ PAGE EXERCICE **************************/
+/*display*/
+.exercice {
+	width: 80%;
+	margin: 0 auto;
+}
+.big_title {
+	font-size: 40px;
+	text-align: center;
+}
+.identity_img {
+	width: 20%;
+}
+.display_inline {
+	display: inline-block;
+}
+.identity_detail {
+	font-size: 25px;
+	vertical-align: top;
+	width: 65%;
+	margin-left: 10%;
+}
+.title {
+	font-size: 30px;
+}
+.subtitle {
+	font-size: 25px;
+}
+.label_identity {
+	font-style: italic;
+	color: blue;
+	font-weight: 300;
+}
+/*hover, relative, absolute*/
+ul {
+	list-style: none;
+	padding-left: 0;
+}
+.navigation-bar {
+	padding-bottom: 100px;
+}
+.navigation-list {
+	display: inline-block;
+	background: blue;
+	position: relative;
+	text-transform: uppercase;
+	margin-right: 5px;
+	padding: 10px 60px;
+	color: white;
+}
+.navigation-list a {
+	color: white;
+	text-decoration: none;
+}
+
+.list-vertical { /* sous-menu */
+	position: absolute;
+	display: none;
+	top: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: rgba(10,10,235,0.8);
+}
+.list-vertical li {
+	width:  100%;
+	white-space: nowrap;
+	padding: 5px 10px;
+}
+.navigation-list:hover .list-vertical {
+	display: block;
+}
+/* table */
+table {
+	border-collapse: collapse;
+}
+td {
+	border: 1px solid #000;
+}
+th {
+	border: 2px solid #000;
+}
+.table2 td {
+	border: 1px solid black;
+	padding: 10px 25px;
+	font-weight: 200;
+}
+.table2 thead {
+	text-align: center;
+	background-color: gray;
+	text-transform: uppercase;
+}
+.table2 tfoot {
+	background-color: gray;
+	text-transform: uppercase;
+}
+.table2 tbody tr:nth-child(odd) td{
+	background-color: #B9BCBC;
+}
+.table2 tbody tr:nth-child(even) td{
+	background-color: #DBE0E0;
+}
+
+
+
+.table3 thead {
+	text-transform: uppercase;
+}
+
+.table3 td {
+	border: 1px solid black;
+	height: 30px;
+	width: 90px;
+    text-align: center;
+    padding: 0 10px;
+}
+.table3 {
+	/*animation-duration: 5s;
+    animation-name: changeColor;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;*/
+}
+.table4 td {
+	padding: 0 10px;
+}
+.table5 {
+	margin: 20px;
+}
+/*bootstrap*/
+.bstrap_column {
+	background-color: orange;
+	height: 200px;
+	margin: 15px 0;
+}
+.bstrap_column2 {
+	background-color: red;
+	height: 100%;
+	margin: 15px 0;
+}
+/*exercice grid*/
+.grid3 {
+	display: grid;
+	grid-template-rows: repeat(3, 1fr);
+	grid-template-columns: 2fr 1fr 1fr;
+	height: 20vw;
+	width: 24%;
+	grid-gap: 10px; /*ajoute des marges entre chaque élément*/
+}
+.item3 {
+	background-color: #444444;
+	border-radius: 10px;
+	color: white;
+	padding: 20px;
+	font-size: 25px;
+}
+.item3:nth-child(1) {
+	grid-row: 1;
+	grid-column: 1/4;
+}
+.item3:nth-child(2) {
+	grid-row: 2/4;
+	grid-column: 1;
+}
+.item3:nth-child(3) {
+	grid-row: 2;
+	grid-column: 2/4;
+}
+/*exercice 2*/
+.grid4 {
+	display: grid;
+	grid-template-rows: repeat(5, 1fr);
+	grid-template-columns: repeat(4, 1fr);
+	height: 20vw;
+	width: 50%;
+	grid-gap: 10px; /*ajoute des marges entre chaque élément*/
+}
+.item4 {
+	background-color: #444444;
+	color: white;
+	padding: 20px;
+	font-size: 25px;
+	border-radius: 10px;
+}
+.item4:first-child {
+	grid-row: 1;
+	grid-column: 1/5;
+}
+.item4:last-child {
+	grid-row: 5;
+	grid-column: 1/5;
+}
+.item4:nth-child(2) {
+	grid-row: 2/4;
+	grid-column: 1;
+}
+.item4:nth-child(4) {
+	grid-row: 2/4;
+	grid-column: 3;
+}
+.item4:nth-child(7) {
+	grid-row: 3/5;
+	grid-column: 4;
+}
+/*exercice 3*/
+.grid5 {
+	display: grid;
+	grid-template-rows: 1fr 3fr;
+	grid-template-columns: 2fr 1fr 2fr 1fr;
+	height: 35vw;
+	width: 70%;
+	grid-gap: 10px; /*ajoute des marges entre chaque élément*/
+}
+.item5 {
+	background-color: #444444;
+	color: white;
+	padding: 30px;
+	font-size: 2.5em;
+	border-radius: 10px;
+}
+.item5:nth-child(1) {
+	grid-row: 1;
+	grid-column: 1/3;
+}
+.item5:nth-child(2) {
+	grid-row: 1;
+	grid-column: 4/5;
+}
+.item5:nth-child(3) {
+	grid-row: 2;
+	grid-column: 1;
+}
+.item5:nth-child(4) {
+	grid-row: 2;
+	grid-column: 2/5;
+	padding: 40px 30px;
+}
+.grid6 {
+	display: grid;
+	grid-template-rows: repeat(3, 1fr);
+	grid-template-columns: 1fr 2fr 1fr;
+	height: 100%;
+	width: 100%;
+	grid-gap: 0 20px; /*ajoute des marges entre chaque élément*/
+}
+.item6 {
+	background-color: #cccccc;
+	color: white;
+	padding-left: 35px;
+	font-size: 1.5em;
+	border-radius: 10px;
+	/*margin: 0 10px;*/
+	display: flex;
+	align-items: center;
+	box-sizing: border-box;
+}
+
+
+/*mediaQueries*/
+@keyframes changeColor {
+	0% {
+		background-color: black;
+	}
+	20% {
+		background-color: blue;
+	}
+	40% {
+		background-color: red;
+	}
+	60% {
+		background-color: green;
+	}
+	80% {
+		background-color: orange;
+	}
+	100% {
+		background-color: black;
+	}
+}
+/* cours keyframes */
+@keyframes move_right {
+	from { /* 0% */
+		left: 0;
+	}
+	50% {
+		left: calc(100% - 50px);
+	}
+	to { /* 100% */
+		left: 0;
+	}
+}
+pre {
+	background-color: #f2f2f2;
+	padding: 10px 25px;
+}
+.content_keyframe {
+	position: relative;
+	border: 1px solid black;
+}
+.object_keyframe {
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 50px;
+	height: 50px;
+	background-color: green;
+	/*animation-name: move_right;
+	animation-duration: 3s;
+	animation-iteration-count: 3;
+	animation-timing-function: linear;
+	animation-delay: 5s;*/
+	animation: 3s 5s 3 move_right;
+}
+
+/* exercice keyframes */
+.keyframes {
+	width: 50%;
+	padding-bottom: 50%;
+	border: 1px solid black;
+	position: relative;
+}
+#move {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 35px;
+	height: 35px;
+	background-color: red;
+	color: white;
+	animation: 10s infinite;
+	animation-name: color, move;
+}
+@keyframes color {
+	25% {
+		background-color: violet;
+	}
+	50% {
+		background-color: blue;
+	}
+	75% {
+		background-color: yellow;
+	}
+	100% {
+		background-color: red;
+	}
+}
+@keyframes move {
+	0% {
+		left: 0;
+		top: 0;
+	}
+	25% {
+		top: 0;
+		left: calc(100% - 35px);
+	}
+	50% {
+		top: calc(100% - 35px);
+		left: calc(100% - 35px);
+	}
+	75% {
+		top: calc(100% - 35px);		
+		left: 0;
+	}
+	100% {
+		left: 0;
+		top: 0;
+	}
+}
+
+/*mediaQueries*/
+/*avec le meta viewport ci-dessous*/
+/*<meta name="viewport" content="width=device-width, initial-scale=1.0">*/
+/*on peut écrire le media queries de cette façon*/
+@media screen and (min-width: 600px) and (max-width: 1200px),
+print and (min-width: 400px) and (max-width: 900px){
+	.flex {
+		flex-direction: column;
+	}
+	.flex_red {
+		width: 50%;
+	}
+}
+
+/*sinon il faudra l'écrire comme ceci :*/
+/*@media screen and (max-device-width: 1200px) {
+	.flex {
+		flex-direction: column;
+	}
+	.flex_red {
+		width: 50%;
+	}
+}*/

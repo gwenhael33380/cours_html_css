@@ -1,0 +1,206 @@
+<!DOCTYPE html> <!-- indique au navigateur que la page est en html 5 -->
+<html lang="fr">
+<head> <!-- c'est ici qu'on stocke toutes les infos autre que l'affichage en front -->
+	<meta charset="UTF-8">
+	<!-- on indique que width sera la largeur de l'écran en pixel et non en résolution -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Exercices html et css</title>
+	<meta name="description" content="Exercices html & css pour la promotion 2022 du Campus du Lac | COBAS">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="manifest" href="favicon/site.webmanifest">
+	<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- fonts déjà importé dans le fichier css -->
+	<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet"> -->
+	<link rel="stylesheet" href="css/style.css?ver=1.0.8">
+
+</head>
+<body>
+	<header id="nav_header">
+		<nav>
+			<ul>
+				<li class="list_nav first_item">
+					<a href="index.html">home</a>
+				</li>
+				<li class="list_nav">
+					<a href="media_queries.html">Media Queries</a>
+				</li>
+				<li class="list_nav">
+					<a href="table.html">Les tableaux</a>
+				</li>
+				<li class="list_nav">
+					<a href="form.html">Les formulaires</a>
+				</li>
+				<li class="list_nav">
+					<a href="bootstrap.html">Bootstrap</a>
+				</li>
+				
+				<li class="list_nav">
+					<a href="exercice.html">Exercices</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<!-- h1 ==> titre de la page, il ne doit y avoir que 1 H1 par page -->
+		<h1 class="big_title">Exercices</h1>
+		<section class="exercice">
+			
+			<h2 class="title">Exercice curriculum vitae</h2>
+			<div>
+				<img class="identity_img" src="img/daft_troupper.jpg" alt="Moi en fin de soirée">
+				<div class="display_inline identity_detail">
+					<p><span class="label_identity">Nom : </span>FERU</p>
+					<p><span class="label_identity">Prénom : </span>Otis</p>
+					<p><span class="label_identity">Age : </span>20 ans, le reste c'est de l'expérience</p>
+				</div>
+			</div>
+			<h3 class="subtitle">Motivations</h3>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing, elit. Consequatur eius id minus unde at, accusamus voluptatem placeat nesciunt fugiat iusto provident iure reiciendis eum. Magnam autem eligendi quas esse? Iusto.
+			Quo minima et harum, natus reprehenderit rem nulla esse eaque quasi reiciendis vitae omnis veniam magnam inventore nam commodi repellat deleniti non, recusandae quas. Ad laudantium quia quae aliquid et.
+			Nam doloribus rem officia quod architecto magnam, neque quidem consequuntur dolore assumenda delectus cupiditate, dolor, eos culpa magni cumque maxime quaerat! Accusantium necessitatibus eaque animi eos sit quod ea accusamus.
+			Perspiciatis, quisquam possimus nam, nesciunt consectetur quibusdam. Animi velit, enim ullam aliquam quia quam. Eveniet eligendi et recusandae, quas numquam facere repellendus hic, iste. Beatae ipsam at, et quod molestiae.</p>
+			<h2>Exercice hover, relative, absolute</h2>
+		</section>
+		<section class="exercice test_relative">
+			<h2 class="title">Exercice position	absolute/relative</h2>
+			<nav id="exo">
+				<ul class="navigation-bar">
+					<li class="navigation-list"><a href="">lien 1</a>
+						<ul class="list-vertical">
+							<li>Sous lien 1</li>
+							<li>Sous lien 2</li>
+							<li>Sous lien 3</li>
+							<li>Sous lien 4</li>
+						</ul>
+					</li>
+
+					<li class="navigation-list"><a href="">lien 2</a>
+						<ul class="list-vertical">
+							<li>Sous lien 1</li>
+							<li>Sous lien 2</li>
+							<li>Sous lien 3</li>
+							<li>Sous lien 4</li>
+						</ul>
+					</li>
+
+					<li class="navigation-list"><a href="">lien 3</a>
+						<ul class="list-vertical">
+							<li>Sous lien 1</li>
+							<li>Sous lien 2</li>
+							<li>Sous lien 3</li>
+							<li>Sous lien 4</li>
+						</ul>
+					</li>
+
+					<li class="navigation-list"><a href="">lien 4</a>
+						<ul class="list-vertical">
+							<li>Sous lien 1</li>
+							<li>Sous lien 2</li>
+							<li>Sous lien 3</li>
+							<li>Sous lien 4</li>
+						</ul>
+					</li>	
+				</ul>
+			</nav>
+		</section>
+		<section class="exercice">
+			<h2 class="title">Exercice keyframes</h2>
+			<div class="keyframes">
+				<div id="move"></div>
+			</div>
+		</section>
+		<section class="exercice">
+			<h2 class="title">Exercice GRID</h2>
+			<p>Reproduire la disposition suivante</p>
+			<img src="img/grid1.png" alt="">
+			<h3>Résultat</h3>
+			<div class="grid3">
+				<div class="item3">One</div>
+				<div class="item3">Two</div>
+				<div class="item3">Three</div>
+				<div class="item3">Four</div>
+				<div class="item3">Five</div>
+			</div>
+			<p>Reproduire la disposition suivante</p>
+			<img src="img/grid2.png" alt="">
+			<h3>Résultat</h3>
+			<div class="grid4">
+				<div class="item4">Le header</div>
+				<div class="item4">Block A</div>
+				<div class="item4">Block B</div>
+				<div class="item4">Block C</div>
+				<div class="item4">Block D</div>
+				<div class="item4">Block E</div>
+				<div class="item4">Block F</div>
+				<div class="item4">Block G</div>
+				<div class="item4">Block H</div>
+				<div class="item4">Block I</div>
+				<div class="item4">Le Footer</div>
+			</div>
+			<p>Reproduire la disposition suivante</p>
+			<img src="img/grid3.png" alt="">
+			<h3>Résultat</h3>
+			<div class="grid5">
+				<div class="item5">A</div>
+				<div class="item5">B</div>
+				<div class="item5">C</div>
+				<div class="item5">
+					<div class="grid6">
+						<div class="item6">E</div>
+						<div class="item6">F</div>
+						<div class="item6">G</div>
+						<div class="item6">H</div>
+						<div class="item6">I</div>
+						<div class="item6">J</div>
+						<div class="item6">K</div>
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+</main>
+	<footer>
+		<div>
+			<a href="index.html">
+				<img class="img_footer" src="img/daft_troupper.jpg" alt="Daft Troupper">
+			</a>
+		</div>
+		<div>
+			<ul>
+				<li>
+					<a href="https://la-cascade.io/une-liste-de-raccourcis-emmet/" target="_blank">Tuto Emmet</a>
+				</li>
+				<li>
+					<a href="https://gist.github.com/spyl94/3963465" target="_blank">Raccourci clavier sublime</a>
+				</li>
+				<!-- pour VS Code -->
+				<li>
+					<a href="https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf" target="_blank">Raccourci clavier VS Code</a>
+				</li>
+			</ul>
+		</div>
+		<div>
+			<ul>
+				<li>
+					<!-- pour ouvrir directement la boite de dialogue avec l'interface email configuré dans OS de l'utilisateur -->
+					<a href="mailto:test@test.fr">Envoyer un email</a>
+				</li>
+				<li>
+					<!-- pour ouvrir directement la boite de dialogue avec l'interface téléphone configuré dans OS de l'utilisateur -->
+					<a href="tel:+33654856445">Appeler</a>
+				</li>
+			</ul>
+		</div>
+
+		<div>Copyright &copy; 2022</div>
+	</footer>
+</body>
+</html>
